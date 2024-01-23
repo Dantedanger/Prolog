@@ -1,0 +1,14 @@
+diz(0,0,0).
+diz(1,0,1).
+diz(0,1,1).
+diz(1,1,1).
+
+con(0,0,0).
+con(1,0,0).
+con(0,1,0).
+con(1,1,1).
+
+inv(0,1).
+inv(1,0).
+
+ckheme1(In1, In2, In3, In4, Out1, Out2):-diz(In1,In2,X1), inv(X1,X2),con(X2, In3, X3), con(X3, In4, Out2),inv(Out2,Out1).
